@@ -48,7 +48,7 @@ function Board({
       return;
     }
 
-    if (newGame.every(Boolean)) {
+    if (newGame.every((val) => val !== null)) {
       setIsDraw(true);
       return;
     }

@@ -1,16 +1,64 @@
-# React + Vite
+# First Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This project is a React application created with Vite and styled with Tailwind CSS.
 
-Currently, two official plugins are available:
+## Create a React project with Vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Create a new Vite project:
 
-## React Compiler
+   ```bash
+   npm create vite@latest
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Choose a package name when prompted.
 
-## Expanding the Oxlint configuration
+3. Choose:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+   - Framework: `React`
+   - Variant: `JavaScript`
+
+4. Move into the new project directory:
+
+   ```bash
+   cd your-project-name
+   ```
+
+5. Install the project dependencies:
+
+   ```bash
+   npm install
+   ```
+
+## Install Tailwind CSS
+
+1. From inside the project directory, install Tailwind CSS and its Vite plugin:
+
+   ```bash
+   npm install tailwindcss @tailwindcss/vite
+   ```
+
+2. Open `vite.config.js` and add the Tailwind plugin:
+
+   ```js
+   import { defineConfig } from 'vite'
+   import react from '@vitejs/plugin-react'
+   import tailwindcss from '@tailwindcss/vite'
+
+   export default defineConfig({
+     plugins: [react(), tailwindcss()],
+   })
+   ```
+
+3. Add the Tailwind import to `src/index.css`:
+
+   ```css
+   @import "tailwindcss";
+   ```
+
+## Run the project
+
+From inside the project directory, start the development server:
+
+```bash
+npm run dev
+```
