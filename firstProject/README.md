@@ -2,6 +2,21 @@
 
 This project is a React application created with Vite and styled with Tailwind CSS.
 
+## Run the current project
+
+From the repository root, install the dependencies and start the Vite development
+server:
+
+```bash
+cd firstProject
+npm install
+npm run dev
+```
+
+Tailwind CSS and its Vite plugin are already listed in `package.json`, so no
+separate Tailwind installation is required. The project uses the Tailwind import
+in `src/index.css` and the Vite plugin configured in `vite.config.js`.
+
 ## Create a React project with Vite
 
 1. Create a new Vite project:
